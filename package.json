@@ -1,5 +1,5 @@
 {
-  "name": "forum-client",
+  "name": "@c4-smoketrees/forum-client",
   "version": "1.0.0",
   "description": "Client for the forum",
   "main": "forum-client.js",
@@ -12,6 +12,9 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/c4-smoketrees/forum-client.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
   },
   "author": "smoketrees",
   "license": "MIT",
