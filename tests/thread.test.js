@@ -125,4 +125,8 @@ describe('#Test client /thread', function () {
     response = await client.getOneThread(threadId)
     assert.equal(response.thread.stars, 0)
   })
+  it('# search thread', async function () {
+    let response = await client.search('draft', Date.now())
+    console.log(response)
+  })
 })

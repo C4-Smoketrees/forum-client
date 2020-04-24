@@ -250,5 +250,12 @@ ForumClient.prototype.removeUpvoteThread = thread.removeUpvoteThread
  * @return {Promise<{status:boolean,err?:error}>}
  */
 ForumClient.prototype.removeDownvoteThread = thread.removeDownvoteThread
+/**
+ * @function search
+ * @param {string} query User search query
+ * @param {string} lastDate
+ * @param {string} token
+ */
+ForumClient.prototype.search = thread.search
 
 module.exports = new ForumClient()

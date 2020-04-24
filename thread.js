@@ -125,6 +125,20 @@ async function unstarThread (threadId, token) {
   return body
 }
 
+async function search (query, lastDate, token) {
+  let auth = ''
+  if (token) {
+    auth = token
+  }
+  const res = await fetch(`${url}/threads/search?q=${encodeURIComponent(query)}&ld=${encodeURIComponent(lastDate)}`, {
+    method: 'GET',
+    headers: { Authorization: auth },
+    agent
+  })
+  const body = await res.json()
+  return body
+}
+
 module.exports = {
   getOneThread,
   getAllThread,
@@ -135,5 +149,6 @@ module.exports = {
   removeUpvoteThread,
   removeDownvoteThread,
   starThread,
-  unstarThread
+  unstarThread,
+  search
 }
